@@ -169,18 +169,18 @@
   #define Z_CS_PIN                         P1_08
 #endif
 
-#define E0_STEP_PIN                        P2_13
-#define E0_DIR_PIN                         P0_11
-#define E0_ENABLE_PIN                      P2_12
-#ifndef E0_CS_PIN
-  #define E0_CS_PIN                        P1_04
+#define Y2_STEP_PIN                        P2_13
+#define Y2_DIR_PIN                         P0_11
+#define Y2_ENABLE_PIN                      P2_12
+#ifndef Y2_CS_PIN
+  #define Y2_CS_PIN                        P1_04
 #endif
 
-#define E1_STEP_PIN                        P1_15
-#define E1_DIR_PIN                         P1_14
-#define E1_ENABLE_PIN                      P1_16
-#ifndef E1_CS_PIN
-  #define E1_CS_PIN                        P1_01
+#define E0_STEP_PIN                        P1_15
+#define E0_DIR_PIN                         P1_14
+#define E0_ENABLE_PIN                      P1_16
+#ifndef E0_CS_PIN
+  #define E0_CS_PIN                        P1_01
 #endif
 
 #define TEMP_1_PIN                      P0_23_A0  // A0 (T0) - (67) - TEMP_1_PIN
@@ -190,15 +190,9 @@
 // Software SPI pins for TMC2130 stepper drivers
 //
 #if ENABLED(TMC_USE_SW_SPI)
-  #ifndef TMC_SW_MOSI
     #define TMC_SW_MOSI                    P1_17
-  #endif
-  #ifndef TMC_SW_MISO
     #define TMC_SW_MISO                    P0_05
-  #endif
-  #ifndef TMC_SW_SCK
     #define TMC_SW_SCK                     P0_04
-  #endif
 #endif
 
 #if HAS_TMC_UART
